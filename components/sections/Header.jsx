@@ -10,20 +10,15 @@ const Header = () => {
       variants={navVariants}
       initial="hidden"
       whileInView="show"
-      className="align-center flex-col flex  gap-2 pt-2 md:pt-5 md:flex-row  "
+      className="align-center flex-col flex  gap-2 pt-5 lg:pt-10 md:flex-row   "
     >
       <a className="relative mx-auto font-medium " href={"/"}>
-        <BsOctagon size={55} color="#ffa500" />
-
-        <Image
-          src="/logo.svg"
-          className="absolute top-2 left-[.6rem] "
-          width="35"
-          height={"35"}
-          alt="logo"
-        />
+        <BsOctagon color="#ffa500" className="text-6xl 2xl:text-7xl" />
+        <div className="absolute top-[.65rem] left-[.7rem] 2xl:left-[.75rem] max-w-[2.4rem]  2xl:max-w-[2.9rem]">
+          <Image src="/logo.svg" width={64} height={64} alt="logo" />
+        </div>
       </a>
-      <nav className="flex mx-auto flex-wrap items-center justify-center text-base ">
+      <nav className="flex mx-auto flex-wrap items-center justify-center text-base lg:text-xl">
         <a href={"/"} className="headlink before:content-['1.'] ">
           {" "}
           About
@@ -41,7 +36,7 @@ const Header = () => {
           Contact
         </a>
       </nav>
-      <button className=" mx-auto font-mono px-4 py-1 text-base  text-lightOrange bg-transparent rounded focus:outline-none hover:bg-darkOrange border-lightOrange border-[1px]">
+      <button className=" mx-auto font-mono px-4 py-2 my-auto text-base 2xl:text-xl  text-lightOrange bg-transparent rounded focus:outline-none hover:bg-darkOrange border-lightOrange border-[1px]">
         Resume
       </button>
     </motion.header>

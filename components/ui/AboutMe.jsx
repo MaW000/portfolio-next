@@ -2,32 +2,32 @@ import Image from "next/image";
 
 const AboutMe = () => {
   return (
-    <section className="relative 3xl:mx-64 pt-12">
+    <section className="relative md:max-w-3xl 2xl:max-w-4xl 3xl:max-w-6xl mx-auto pt-2">
       <div className="bg-[#301008] border-t-4 border-r-4 border-lightOrange absolute  inset-0 -z-10 w-[105%] rounded-2xl " />
       <div className="flex items-center mt-2 mb-10 ml-4 text-lightOrange">
-        <h1 className="mr-2.5">01.</h1>
-        <h1 className="text-2xl leading-5 text-darkOrange">About me</h1>
-        <div className="block h-[1px] w-1/4 bg-lightOrange ml-5" />
+        <h1 className="mr-2.5 2xl:text-2xl">01.</h1>
+        <h1 className="text-4xl leading-5 text-darkOrange">About me</h1>
+        <div className="block h-[1px] 2xl:h-1 mt-4 w-1/4 bg-lightOrange ml-5" />
       </div>
 
       <div className="md:grid md:grid-cols-10 gap-12 ml-4 flex flex-col md:flex-row">
         <div className="col-span-5 2fr text-slate">
-          <div>
-            <p className="mb-3.5 text-base ">
+          <div className="text-base 2xl:text-xl ">
+            <p className="mb-3.5 ">
               Hello! My name is Matthew and I enjoy creating things that live on
               the internet. My intrest in the web started back when I built my
               first computer in elementary school. Since then I have lived on
               the internet and software.
             </p>
-            <p className="mb-3.5 text-base">
+            <p className="mb-3.5 ">
               Fast-forward to today I have completed a bootcamp and have been
               furthering my skills everyday.
             </p>
-            <p className="mb-3.5 text-base">
+            <p className="mb-3.5 ">
               I also recently have been coding alot of projects on my github.
             </p>
           </div>
-          <ul className="grid grid-cols-2">
+          <ul className="grid grid-cols-2 2xl:text-lg">
             <li className='before:content-["▹"] before:text-lightOrange'>{`Javascript (ES6+)`}</li>
             <li className='before:content-["▹"] before:text-lightOrange'>{`React`}</li>
             <li className='before:content-["▹"] before:text-lightOrange'>{`Node.js`}</li>
