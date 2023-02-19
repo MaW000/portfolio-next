@@ -2,10 +2,12 @@ import { motion } from "framer-motion-3d";
 import { useGLTF } from "@react-three/drei";
 
 import { Canvas } from "@react-three/fiber";
+import { useAnimationControls } from "framer-motion";
+import { useEffect } from "react";
 
 export function Cube() {
   return (
-    <Canvas dpr={[1, 2]} camera={{ position: [0, 0, 50], fov: 55 }}>
+    <Canvas dpr={[1, 2]} camera={{ position: [0, 5, 50], fov: 90 }}>
       <Lights />
       <Geometry />
     </Canvas>
@@ -31,25 +33,36 @@ function Lights() {
 
 function Geometry() {
   const { nodes, materials } = useGLTF("/cube.glb");
-  const xCord = 0;
+  const controls = useAnimationControls();
+
+  async function sequence() {
+    await controls.start({
+      rotateY: [0, 6.3],
+      rotateX: [0, -0.5],
+      transition: {
+        duration: 8,
+        ease: "linear",
+        rotateX: { delay: 7, duration: 1, ease: "linear" },
+      },
+    });
+    await controls.start({
+      rotateX: [-0.5, -6.3],
+      // rotateZ: [0, -0.1, 0],
+      // y: [40, 0, 40],
+      // z: [-100, -120, -100],
+      transition: {
+        duration: 8,
+        ease: "linear",
+      },
+    });
+    sequence();
+  }
+  useEffect(() => {
+    sequence();
+  }, []);
   return (
     <>
-      <motion.group
-        position={[0, 6.3, -100]}
-        scale={146.6}
-        animate={{
-          rotateY: [6.3, 0, 0, 0],
-          rotateX: [0, 0, 4.5, 4.5, 0],
-          z: [-100, -125, -100],
-          x: [xCord, xCord + 6.3, xCord],
-          y: [26.3, 5, 6, -25, 6, 26.3],
-        }}
-        transition={{
-          duration: 10,
-          ease: "linear",
-          repeat: Infinity,
-        }}
-      >
+      <motion.group position={[0, 5, -100]} scale={156.6} animate={controls}>
         <mesh
           geometry={nodes.Curve_1.geometry}
           material={materials["SVGMat.007"]}
