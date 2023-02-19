@@ -17,6 +17,7 @@ module.exports = {
       screens: {
         "3xl": "2000px",
         "40p": "1439px",
+        smm: { max: "767px" },
         // => @media (min-width: 992px) { ... }
       },
       colors: {
@@ -28,8 +29,11 @@ module.exports = {
         lightnavy: "#112240",
         lightslate: "#a8b2d1",
         maroon: "#301008",
+        ymaroon: "#302408",
+        bmaroon: "#082830",
       },
       margin: {
+        97: "28rem",
         100: "34rem",
       },
     },
