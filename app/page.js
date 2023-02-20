@@ -1,11 +1,11 @@
-import HeroSection from "@/components/sections/HeroSection";
-import Header from "@/components/sections/Header";
+import { ProjectSection, Header, HeroSection } from "@/components/sections";
 
 export default function Home() {
   return (
     <main>
       <Header />
       <HeroSection />
+      <ProjectSection />
     </main>
   );
 }

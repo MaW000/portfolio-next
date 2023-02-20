@@ -8,7 +8,7 @@
   }
 
   .headlink {
-    @apply mx-1 md:mx-5 text-[#CCD6F1] before:content-['1.'] before:text-lightOrange hover:text-lightOrange
+    @apply mx-1 md:mx-5 text-[#CCD6F1]  after:text-lightOrange  before:text-lightOrange hover:text-lightOrange
   }
 }
 
