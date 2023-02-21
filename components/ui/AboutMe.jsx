@@ -14,8 +14,8 @@ const AboutMe = () => {
       <div className="md:grid md:grid-cols-10 gap-12 ml-4 flex flex-col md:flex-row">
         <div className="col-span-5 2fr text-slate">
           <div className="flex items-center mt-2 mb-10 -ml-2 text-lightOrange relative">
-            <h1 className="mr-2.5 lg:text-lg 2xl:text-2xl 3xl:text-3xl">01.</h1>
-            <h1 className="3xl:text-4xl 2xl:text-xl lg:text-xl min-w-fit leading-5 text-darkOrange">
+            <h1 className="mr-2.5 lg:text-lg 2xl:text-2xl ">01.</h1>
+            <h1 className="3xl:text-2xl 2xl:text-xl lg:text-xl min-w-fit leading-5 text-darkOrange">
               About me
             </h1>
             <div className="block h-[1px] lg:h-1 mt-1 w-full bg-lightOrange ml-5" />

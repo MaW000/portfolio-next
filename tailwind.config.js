@@ -35,6 +35,7 @@ module.exports = {
       margin: {
         97: "28rem",
         100: "34rem",
+        101: "38rem",
       },
     },
   },
