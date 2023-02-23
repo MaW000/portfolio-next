@@ -8,7 +8,7 @@ const AboutMe = () => {
       initial={"hidden"}
       whileInView="show"
       variants={slideIn("right", "tween", 0.2, 1)}
-      className="relative md:max-w-3xl 2xl:max-w-4xl 3xl:max-w-6xl mx-auto pt-2"
+      className="relative md:max-w-3xl 2xl:max-w-3xl 3xl:max-w-6xl mx-auto pt-2"
     >
       <div className="bg-[#301008] border-t-4 border-r-4 border-lightOrange absolute  inset-0 -z-10 w-[105%] rounded-2xl " />
       <div className="md:grid md:grid-cols-10 gap-12 ml-4 flex flex-col md:flex-row">

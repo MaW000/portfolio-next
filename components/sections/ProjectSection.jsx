@@ -17,7 +17,7 @@ const ProjectSection = () => {
         <h1 className="text-lg lg:text-xl leading-5 text-darkOrange underline underline-offset-4 after:content-['\00a0\00a0\00a0\00a0\00a0\00a0'] ">
           Some Things I`ve Built
         </h1>
-        <div className="md:block h-[1px] w-2/5 bg-darkOrange ml-5 hidden md:visible" />
+        <div className="md:absolute h-[1px] w-5/5 bg-darkOrange ml-5 hidden md:visible" />
       </div>
       <ul className="mx-5">
         <Projects />

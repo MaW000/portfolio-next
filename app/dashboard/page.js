@@ -1,3 +1,12 @@
+"use client";
+
+import { GoogleSignInButton, DashboardForm } from "@/components/ui";
+
 export default function DashboardPage() {
-  return <main></main>;
+  return (
+    <main className="flex flex-col justify-center items-center min-w-full min-h-screen">
+      <GoogleSignInButton />
+      <DashboardForm />
+    </main>
+  );
 }
