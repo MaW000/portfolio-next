@@ -51,8 +51,9 @@ const Projects3 = () => {
           return (
             <div
               key={project.title}
-              className={"grid grid-cols-12 max-w-6xl mx-auto group   "}
+              className={"grid grid-cols-12 max-w-6xl mx-auto group relative  "}
             >
+              <div className="absolute lg:group-even:left-0 lg:group-odd:right-0      h-full w-2 bg-darkOrange-500" />
               <div className="full lg:half  lg:opacity-20   relative -z-10">
                 <div className="bg-lightOrange absolute h-full  w-full inset-0" />
                 <Image
@@ -63,21 +64,25 @@ const Projects3 = () => {
                   alt="app photo"
                 />
               </div>
-              <div className="col-start-1 lg:group-even:col-start-1 lg:group-odd:col-start-5  lg:group-even:col-end-9  col-span-12 lg:group-odd:text-right p-6 pt-8 row-span-full text-slate lg:bg-transparent bg-ymaroon opacity-[.9] lg:text-2xl flex flex-col ">
-                <h1 className="text-lightOrange font-mono">Featured Project</h1>
+              <div className="col-start-1 relative lg:group-even:col-start-1 lg:group-odd:col-start-5  lg:group-even:col-end-9  col-span-12 lg:group-odd:text-right py-6 px-2 pt-8 row-span-full text-slate lg:bg-transparent bg-ymaroon opacity-[.9] lg:text-2xl flex flex-col ">
+                <div className="px-2">
+                  <h1 className="text-lightOrange font-mono">
+                    Featured Project
+                  </h1>
 
-                <h1 className="text-lightslate leading-7 text-2xl mb-5 font-bold">
-                  {project.title}
-                </h1>
+                  <h1 className="text-lightslate leading-7 text-2xl mb-5 font-bold">
+                    {project.title}
+                  </h1>
 
-                <p>{project.info}</p>
-                <div className="flex relative lg:group-even:justify-start   justify-end align-bottom text-slate mt-2 gap-3   text-2xl  md:text-3xl ">
-                  <a className="" href={project.urls.github}>
-                    <TbBrandGithub className="" />
-                  </a>
-                  <a className="" href={project.urls.live}>
-                    <VscLinkExternal className="" />
-                  </a>
+                  <p>{project.info}</p>
+                  <div className="flex relative lg:group-even:justify-start   justify-end align-bottom text-slate mt-2 gap-3   text-2xl  md:text-3xl ">
+                    <a className="" href={project.urls.github}>
+                      <TbBrandGithub className="" />
+                    </a>
+                    <a className="" href={project.urls.live}>
+                      <VscLinkExternal className="" />
+                    </a>
+                  </div>
                 </div>
 
                 <div className="flex flex-col mt-10 ">

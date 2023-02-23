@@ -1,4 +1,9 @@
-import { ProjectSection, Header, HeroSection } from "@/components/sections";
+import {
+  ProjectSection,
+  Header,
+  HeroSection,
+  ContactSection,
+} from "@/components/sections";
 
 export default function Home() {
   return (
@@ -6,6 +11,7 @@ export default function Home() {
       <Header />
       <HeroSection />
       <ProjectSection />
+      <ContactSection />
     </main>
   );
 }
