@@ -23,6 +23,7 @@ module.exports = {
       colors: {
         lightOrange: "#F1B24A",
         darkOrange: "#ff8c00",
+        "darkOrange-500": "rgba(255, 140, 0, 0.5)",
         slate: "#ccd6f6",
         darkslate: "#495670",
         lightestnavy: "#233554",

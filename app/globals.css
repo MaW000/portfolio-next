@@ -13,13 +13,13 @@
     @apply top-0
   }
   .half {
-    @apply col-start-1 col-span-10 row-span-full
+    @apply col-start-1 col-span-10 row-span-full group-even:col-start-3  group-even:col-span-12
   }
   .full {
     @apply col-start-1 col-span-12 row-span-full
   }
   .headlink {
-    @apply mx-1 md:mx-5 text-[#CCD6F1]  after:text-lightOrange  before:text-lightOrange hover:text-lightOrange
+    @apply text-[#CCD6F1]  after:text-lightOrange  before:text-lightOrange hover:text-lightOrange
   }
 }
 
@@ -28,7 +28,7 @@
     width: 6px;
     height: 10px;
   }
-
+  
   .scrollbar::-webkit-scrollbar-track {
     border-radius: 100vh;
     background: #18181b;

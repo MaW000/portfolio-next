@@ -27,21 +27,21 @@ const Header = () => {
       <nav className="flex mx-auto flex-wrap items-center justify-center text-base lg:text-xl  3xl:text-2xl">
         <a
           href={"/"}
-          className="headlink before:content-['|'] before:mr-5 after:ml-5  "
+          className="headlink before:content-['|'] before:mr-1 after:ml-1 md:before:mr-5 md:after:ml-5  "
         >
           {" "}
           About
         </a>
         <a
           href={"/"}
-          className="headlink before:content-['|'] before:mr-5 after:ml-5  "
+          className="headlink before:content-['|'] before:mr-1 after:ml-1  md:before:mr-5 md:after:ml-5  "
         >
           {" "}
           Work
         </a>
         <a
           href={"/"}
-          className="headlink before:content-['|'] after:ml-5  before:mr-5 after:content-['|']"
+          className="headlink before:content-['|'] before:mr-1 after:ml-1 md:before:mr-5 md:after:ml-5 after:content-['|']"
         >
           {" "}
           Contact
