@@ -60,9 +60,9 @@ model VerificationToken {
 model Project {
   id     String   @id @default(auto()) @map("_id") @db.ObjectId
   title  String
-  info   String?
+  info   String
   tech   String[]
-  img    String?
-  github String?
+  img    String
+  github String
   live   String?
 }

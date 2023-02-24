@@ -27,93 +27,88 @@ export default function DashboardForm() {
     })
       .then(async (res) => await res.json())
       .then((res) => {
-        // const { data } = res;
-
         setProject(res);
       });
   };
-  console.log(project);
-  if (session) {
+
+  if (session && session.user.email === "mwardlow0@gmail.com") {
     return (
-      <form onSubmit={handleSubmit} className={"grid text-center gap-2"}>
-        <label>
-          title
+      <form onSubmit={handleSubmit} className={" text-center "}>
+        <div className="flex flex-col gap-2 w-55">
           <input
             onChange={(e) =>
               setData((prev) => ({ ...prev, title: e.target.value }))
             }
+            placeholder="Title"
             className="bg-black  ml-2 text-white"
-            id="title"
           />
-        </label>
 
-        <label className="">
-          img
           <input
             onChange={(e) =>
               setData((prev) => ({ ...prev, img: e.target.value }))
             }
+            placeholder="Image"
             className="bg-black ml-2 text-white"
-            id="image"
           />
-        </label>
-        <label className="">
-          info
+
           <textarea
             onChange={(e) =>
               setData((prev) => ({ ...prev, info: e.target.value }))
             }
+            placeholder="Info"
             className="bg-black ml-2 text-white"
             type="text-box"
-            id="info"
           />
-        </label>
-        <label className="">
-          github
+
           <input
             onChange={(e) =>
               setData((prev) => ({ ...prev, github: e.target.value }))
             }
+            placeholder="Github"
             className="bg-black ml-2 text-white"
             type="text-box"
-            id="info"
           />
-        </label>
-        <label className="">
-          live
+
           <input
             onChange={(e) =>
               setData((prev) => ({ ...prev, live: e.target.value }))
             }
+            placeholder="Live"
             className="bg-black ml-2 text-white"
             type="text-box"
-            id="info"
           />
-        </label>
-        <label className="">
-          tech
-          <input
-            className="bg-black ml-2 text-white"
-            type="text-box"
-            id="info"
-          />
-          <button
-            type="button"
-            onClick={(e) => {
-              console.log(e.target.previousSibling.value);
-              setData((prev) => ({
-                ...prev,
-                tech: [...prev.tech, e.target.previousSibling.value],
-              }));
-            }}
-          >
-            add
-          </button>
-        </label>
-        {data.tech && (
           <div>
+            <input
+              placeholder="Tech"
+              className="bg-black ml-2 text-white relative"
+              type="text-box"
+            />
+            <button
+              className="absolute capitalize ml-1 bg-gray-500 px-1 rounded"
+              type="button"
+              onClick={(e) => {
+                console.log(e.target.previousSibling.value);
+                setData((prev) => ({
+                  ...prev,
+                  tech: [...prev.tech, e.target.previousSibling.value],
+                }));
+              }}
+            >
+              add tech
+            </button>
+          </div>
+        </div>
+        {data.tech && (
+          <div className=" justify-center ml-6  flex  ">
             {data.tech.map((tech) => {
-              return <h1 key={tech}>{tech}</h1>;
+              return (
+                <h1
+                  className="mr-2 after:ml-2 [&:not(:last-child)]:after:content-['|']"
+                  key={tech}
+                >
+                  {tech}
+                </h1>
+              );
             })}
           </div>
         )}
@@ -121,5 +116,7 @@ export default function DashboardForm() {
         {project && <p>{project.title} has been saved </p>}
       </form>
     );
+  } else if (session) {
+    return <h1>Sign in with admin account</h1>;
   }
 }
