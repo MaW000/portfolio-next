@@ -10,7 +10,7 @@ const ContactSection = () => {
       variants={navVariants}
       initial="hidden"
       whileInView="show"
-      className="py-10  mx-auto"
+      className="py-10 pb-40 mx-auto"
     >
       <div className="flex items-center text-center  justify-center mt-2 mb-10 text-lightOrange ">
         <h1 className="mr-2.5 lg:text-2xl">03.</h1>

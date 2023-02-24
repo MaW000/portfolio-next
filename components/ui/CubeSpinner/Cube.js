@@ -38,15 +38,14 @@ function Geometry() {
   async function sequence() {
     await controls.start({
       rotateY: [0, 6.3],
-      rotateX: [0, -0.5],
+
       transition: {
         duration: 8,
         ease: "linear",
-        rotateX: { delay: 7, duration: 1, ease: "linear" },
       },
     });
     await controls.start({
-      rotateX: [-0.5, -6.3],
+      rotateX: [0, -6.3],
       // rotateZ: [0, -0.1, 0],
       // y: [40, 0, 40],
       // z: [-100, -120, -100],
