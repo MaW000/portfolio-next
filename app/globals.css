@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+}
 @layer components {
   .x-pad {
     @apply py-32  px-32 mx-32;
