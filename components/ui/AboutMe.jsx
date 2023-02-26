@@ -42,16 +42,15 @@ const AboutMe = () => {
         </div>
         <div className="relative col-start-6 col-end-11 flex mt-5 smm:w-4/5 ">
           <div className="top-5 left-5 absolute w-full h-full rounded-xl z-0 border-lightOrange border-2"></div>
-          <div className="transition hover:scale-105  ease-in duration-150">
-            <div className="absolute bg-lightOrange w-full h-full rounded-xl "></div>
-            <Image
-              src="/cover.jpg"
-              width={1000}
-              height={1000}
-              alt="cover"
-              className="w-full z-11 grayscale mix-blend-multiply rounded-xl  hover:grayscale-0 hover:mix-blend-normal transition ease-in duration-150"
-            />
-          </div>
+
+          <div className="absolute bg-lightOrange w-full h-full rounded-xl "></div>
+          <Image
+            src="/cover.jpg"
+            width={2000}
+            height={1000}
+            alt="cover"
+            className="w-full z-11 grayscale mix-blend-multiply rounded-xl  hover:grayscale-0 hover:mix-blend-normal transition ease-in duration-150"
+          />
         </div>
       </div>
     </motion.section>
