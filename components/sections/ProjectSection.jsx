@@ -20,7 +20,6 @@ const ProjectSection = () => {
           </h1>
         </div>
         <div className="md:absolute bottom-0 right-[25%] h-[2px] w-3/6 bg-lightOrange  md:visible" />
-        {/* <div className="md:absolute bottom-0 h-[5px] w-1/5 bg-darkOrange ml-5 hidden md:visible" /> */}
       </div>
       <ul className="mx-5">
         <Projects />

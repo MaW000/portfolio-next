@@ -26,17 +26,20 @@ const Projects3 = () => {
                 }
               >
                 <div className="absolute lg:group-even:left-0 lg:group-odd:right-0 hidden lg:block     h-full w-2 bg-darkOrange-500" />
-                <div className="full lg:half  lg:opacity-20   relative -z-10">
-                  <div className="bg-lightOrange   absolute h-full  w-full inset-0" />
-                  <Image
-                    className="grayscale h-full w-full mix-blend-multiply "
-                    width={"2559"}
-                    height={"1306"}
-                    src={project.img}
-                    alt="app photo"
-                  />
+
+                <div className="full lg:half  lg:opacity-20 lg:hover:opacity-100  transition hover:scale-105   ease-in-out duration-1000  relative lg:hover:z-20 ">
+                  <div className="bg-lightOrange   absolute h-full  w-full inset-0   " />
+                  <a href={project.live}>
+                    <Image
+                      className="grayscale h-full w-full mix-blend-multiply  lg:hover:grayscale-0 lg:hover:mix-blend-normal  transition   "
+                      width={"2559"}
+                      height={"1306"}
+                      src={project.img}
+                      alt="app photo"
+                    />
+                  </a>
                 </div>
-                <div className="col-start-1 relative lg:group-even:col-start-1 lg:group-odd:col-start-5  lg:group-even:col-end-9  col-span-12 lg:group-odd:text-right py-6 px-2 pt-8 row-span-full text-slate lg:bg-transparent bg-ymaroon opacity-[.9] lg:text-xl 3xl:text-2xl flex flex-col ">
+                <div className="col-start-1 relative lg:group-even:col-start-1 lg:group-odd:col-start-5 z-10  lg:group-even:col-end-9  col-span-12 lg:group-odd:text-right py-6 px-2 pt-8 row-span-full text-slate lg:bg-transparent bg-ymaroon opacity-[.9] lg:text-xl 3xl:text-2xl flex flex-col ">
                   <div className="px-2">
                     <h1 className="text-lightOrange font-mono">
                       Featured Project
@@ -63,9 +66,9 @@ const Projects3 = () => {
                         return (
                           <div
                             key={tech}
-                            className=" bg-darkOrange-500 text-base  lg:group-odd:pr-1 lg:group-even:pl-1 relative rounded-bl-lg float-right lg:group-even:text-left  lg:group-even:rounded-br-lg text-right box-content "
+                            className=" bg-darkOrange-500 text-base  lg:group-odd:pr-1 lg:group-even:pl-1 relative lg:group-odd:rounded-bl-lg float-right lg:group-even:text-left  lg:group-even:rounded-br-lg text-right box-content "
                           >
-                            <h1 className="justify-end lg:group-even:text-start lg:group-even:ml-0 lg:group-even:px-0 lg:group-even:pr-6     text-end ml-2 px-2 w-full opacity-100  rounded-bl-xl">
+                            <h1 className="justify-end lg:group-even:text-start lg:group-even:ml-0 lg:group-even:px-0 lg:group-even:pr-6     text-end ml-2 px-2 w-full opacity-100 ">
                               {tech}
                             </h1>
                             <div className="absolute bottom-0 right-0 lg:group-even:left-0 w-[80%] lg:group-even:rounded-tr-xl lg:group-odd:rounded-tl-xl   bg-darkOrange h-1" />
