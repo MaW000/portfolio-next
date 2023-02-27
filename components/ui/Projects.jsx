@@ -30,7 +30,7 @@ const Projects3 = () => {
                 <div className="full lg:half  lg:opacity-20 lg:hover:opacity-100  transition hover:scale-105   ease-in-out duration-1000  relative lg:hover:z-20 ">
                   <div className="bg-lightOrange   absolute h-full  w-full inset-0   " />
                   <a
-                    href={project.live}
+                    href={project.live || project.github}
                     target="_blank"
                     rel="noreferrer noopener"
                   >
