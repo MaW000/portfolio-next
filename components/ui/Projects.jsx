@@ -28,19 +28,19 @@ const Projects3 = () => {
                 <div className="absolute lg:group-even:left-0 lg:group-odd:right-0 hidden lg:block     h-full w-2 bg-darkOrange-500" />
 
                 <div className="full lg:half  lg:opacity-20 lg:hover:opacity-100  transition hover:scale-105   ease-in-out duration-1000  relative lg:hover:z-20 ">
-                  <div className="bg-lightOrange   absolute h-full  w-full inset-0   " />
                   <a
                     href={project.live || project.github}
                     target="_blank"
                     rel="noreferrer noopener"
                   >
                     <Image
-                      className="grayscale h-full w-full mix-blend-multiply  lg:hover:grayscale-0 lg:hover:mix-blend-normal  transition   "
+                      className="grayscale group/img h-full w-full mix-blend-multiply peer  lg:hover:grayscale-0 lg:hover:mix-blend-normal  transition   "
                       width={"2559"}
                       height={"1306"}
                       src={project.img}
                       alt="app photo"
                     />
+                    <div className="bg-lightOrange absolute h-full peer-hover:hidden w-full inset-0 peer -z-10 " />
                   </a>
                 </div>
                 <div className="col-start-1 relative lg:group-even:col-start-1 lg:group-odd:col-start-5 z-10  lg:group-even:col-end-9  col-span-12 lg:group-odd:text-right py-6 px-2 pt-8 row-span-full text-slate lg:bg-transparent bg-ymaroon opacity-[.9] lg:text-xl 3xl:text-2xl flex flex-col ">
