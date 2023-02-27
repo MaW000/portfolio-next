@@ -29,7 +29,11 @@ const Projects3 = () => {
 
                 <div className="full lg:half  lg:opacity-20 lg:hover:opacity-100  transition hover:scale-105   ease-in-out duration-1000  relative lg:hover:z-20 ">
                   <div className="bg-lightOrange   absolute h-full  w-full inset-0   " />
-                  <a href={project.live}>
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
                     <Image
                       className="grayscale h-full w-full mix-blend-multiply  lg:hover:grayscale-0 lg:hover:mix-blend-normal  transition   "
                       width={"2559"}
@@ -51,10 +55,20 @@ const Projects3 = () => {
 
                     <p className="text-base 3xl:text-xl">{project.info}</p>
                     <div className="flex relative lg:group-even:justify-start   justify-end align-bottom text-slate mt-2 gap-3   text-2xl  md:text-3xl ">
-                      <a className="" href={project.github}>
+                      <a
+                        className=""
+                        href={project.github}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                      >
                         <TbBrandGithub className="" />
                       </a>
-                      <a className="" href={project.live}>
+                      <a
+                        className=""
+                        href={project.live}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                      >
                         <VscLinkExternal className="" />
                       </a>
                     </div>
