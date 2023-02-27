@@ -20,7 +20,7 @@ const Hero = () => {
           Matthew Wardlow.
         </h2>
       </motion.div>
-      <motion.div variants={slideIn("right", "tween", 0.2, 1)}>
+      <motion.div variants={slideIn("left", "tween", 0.2, 1)}>
         <h3 className="text-slate -z-50 mt-[10px] text-2xl lg:text-5xl    3xl:text-6xl">
           {`I'm thinking of the next solution`}
         </h3>
