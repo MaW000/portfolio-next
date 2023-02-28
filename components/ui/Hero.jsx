@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { staggerContainer, slideIn } from "@/motion";
-import Link from "next/link";
+
 const Hero = () => {
   return (
     <motion.section
@@ -33,7 +33,7 @@ const Hero = () => {
         </h3>
 
         <p className="max-w-xl mt-3 font-sans text-sm text-slate lg:text-xl 2xl:text-3xl 2xl:max-w-4xl  3xl:max-w-5xl  3xl:text-3xl">
-          Fullstack Developer passionatly building out my skillset.
+          Fullstack Developer passionately building out my skillset.
           <br /> Currently, I’m focused on finding my first fulltime role.
         </p>
 
