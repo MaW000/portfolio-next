@@ -1,6 +1,5 @@
 import {
   ProjectSection,
-  Header,
   HeroSection,
   ContactSection,
 } from "@/components/sections";
@@ -8,7 +7,6 @@ import {
 export default function Home() {
   return (
     <main className="overflow-hidden">
-      <Header />
       <HeroSection />
       <ProjectSection />
       <ContactSection />
