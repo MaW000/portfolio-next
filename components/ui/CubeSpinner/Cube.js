@@ -1,13 +1,10 @@
-
 import { useGLTF, OrbitControls } from "@react-three/drei";
-
 import { Canvas, useFrame } from "@react-three/fiber";
-import { useAnimationControls } from "framer-motion";
-import { useEffect, useState, useRef } from "react";
+import { useState, useRef } from "react";
 import * as THREE from "three";
 export function Cube() {
   return (
-    <Canvas dpr={[1, 2]} camera={{ position: [0, 5, 50], fov: 90 }}>
+    <Canvas dpr={[1, 2]} camera={{ position: [20, 0, 150], fov: 90 }}>
       <Lights />
       <Geometry />
       <OrbitControls />
@@ -27,7 +24,7 @@ function Lights() {
           color="orange"
         />
       ))}
-      <ambientLight intensity={0.1} />
+      <ambientLight intensity={0.2} />
     </>
   );
 }
@@ -44,7 +41,7 @@ function Geometry() {
   return (
     <>
       <group
-        position={[0, 5, -100]}
+        position={[30, -25, 1]}
         ref={ref}
         onPointerDown={() => {
           setCount((count + 1) % 3);

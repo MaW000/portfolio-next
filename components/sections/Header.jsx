@@ -41,7 +41,7 @@ const Header = () => {
       variants={navVariants}
       initial="hidden"
       whileInView="show"
-      className="align-center flex-col flex   gap-2 pt-5 lg:pt-10 md:flex-row  absolute top-0 w-screen   "
+      className="align-center flex-col flex z-30   gap-2 pt-5 lg:pt-10 md:flex-row  absolute top-0 w-screen   "
     >
       <a className="relative mx-auto font-medium " href={"/"}>
         <div className=" 2xl:left-[.75rem] max-w-[8rem] md:max-w-[8rem] xl:max-w-[10rem] 3xl:max-w-[13.9rem]">

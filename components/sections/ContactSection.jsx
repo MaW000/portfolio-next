@@ -12,7 +12,7 @@ const ContactSection = () => {
       whileInView="show"
       className="py-10 pb-40 mx-auto"
     >
-      <div className="flex items-center text-center  justify-center mt-2 mb-10 text-lightOrange ">
+      <div className="flex items-center text-center -ml-7 justify-center mt-2 mb-10 text-lightOrange ">
         <h1 className="mr-2.5 lg:text-2xl">03.</h1>
         <h1 className="text-lg lg:text-3xl leading-5 text-darkOrange ">
           What&apos;s Next
