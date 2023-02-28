@@ -10,6 +10,17 @@ module.exports = {
   ],
   theme: {
     extend: {
+      animation: {
+        fade: "fadeOut 1s ease-in-out",
+      },
+
+      // that is actual animation
+      keyframes: (theme) => ({
+        fadeOut: {
+          "0%": { backgroundColor: theme("colors.transparent"), opacity: 0 },
+          "100%": { backgroundColor: theme("colors.stone.700"), opacity: 1 },
+        },
+      }),
       maxWidth: {
         "9xl": "104rem",
         "8xl": "88rem",
