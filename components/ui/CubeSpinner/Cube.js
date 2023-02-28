@@ -1,15 +1,16 @@
-import { motion } from "framer-motion-3d";
-import { useGLTF } from "@react-three/drei";
 
-import { Canvas } from "@react-three/fiber";
+import { useGLTF, OrbitControls } from "@react-three/drei";
+
+import { Canvas, useFrame } from "@react-three/fiber";
 import { useAnimationControls } from "framer-motion";
-import { useEffect } from "react";
-
+import { useEffect, useState, useRef } from "react";
+import * as THREE from "three";
 export function Cube() {
   return (
     <Canvas dpr={[1, 2]} camera={{ position: [0, 5, 50], fov: 90 }}>
       <Lights />
       <Geometry />
+      <OrbitControls />
     </Canvas>
   );
 }
@@ -33,35 +34,23 @@ function Lights() {
 
 function Geometry() {
   const { nodes, materials } = useGLTF("/cube.glb");
-  const controls = useAnimationControls();
+  const [count, setCount] = useState(0);
+  const ref = useRef();
+  useFrame((_, delta) => {
+    ref.current.rotation.x += delta;
+    ref.current.rotation.y += 0.2 * delta;
+  });
 
-  async function sequence() {
-    await controls.start({
-      rotateY: [0, 6.3],
-
-      transition: {
-        duration: 8,
-        ease: "linear",
-      },
-    });
-    await controls.start({
-      rotateX: [0, -6.3],
-      // rotateZ: [0, -0.1, 0],
-      // y: [40, 0, 40],
-      // z: [-100, -120, -100],
-      transition: {
-        duration: 8,
-        ease: "linear",
-      },
-    });
-    sequence();
-  }
-  useEffect(() => {
-    sequence();
-  }, []);
   return (
     <>
-      <motion.group position={[0, 5, -100]} scale={156.6} animate={controls}>
+      <group
+        position={[0, 5, -100]}
+        ref={ref}
+        onPointerDown={() => {
+          setCount((count + 1) % 3);
+        }}
+        scale={156.6}
+      >
         <mesh
           geometry={nodes.Curve_1.geometry}
           material={materials["SVGMat.007"]}
@@ -120,7 +109,7 @@ function Geometry() {
         />
         <mesh geometry={nodes.Curve_15.geometry} material={materials.edges} />
         <mesh geometry={nodes.Curve_16.geometry} material={materials.corners} />
-      </motion.group>
+      </group>
     </>
   );
 }
