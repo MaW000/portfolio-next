@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { navVariants } from "@/motion";
-import { BsOctagon } from "react-icons/bs";
+
 import Image from "next/image";
 const Header = () => {
   function scrollToTop(x) {
@@ -35,16 +35,15 @@ const Header = () => {
     t--;
     return (-c / 2) * (t * (t - 2) - 1) + b;
   };
-  
+
   return (
     <motion.header
       variants={navVariants}
       initial="hidden"
       whileInView="show"
-      className="align-center flex-col flex   gap-2 pt-5 lg:pt-10 md:flex-row   "
+      className="align-center flex-col flex   gap-2 pt-5 lg:pt-10 md:flex-row  absolute top-0 w-screen   "
     >
       <a className="relative mx-auto font-medium " href={"/"}>
-        {/* <BsOctagon color="#ffa500" className="text-6xl 2xl:text-7xl" /> */}
         <div className=" 2xl:left-[.75rem] max-w-[8rem] md:max-w-[8rem] xl:max-w-[10rem] 3xl:max-w-[13.9rem]">
           <Image
             src="/logo.png"

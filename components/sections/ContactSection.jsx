@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { navVariants } from "@/motion";
-import { ProjectsM, Projects, Projects3, ContactButton } from "../ui";
+import { ContactButton } from "../ui";
 
 const ContactSection = () => {
   return (

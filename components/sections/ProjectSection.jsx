@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { navVariants } from "@/motion";
-import { ProjectsM, Projects, Projects3 } from "../ui";
+import { Projects } from "../ui";
 
 const ProjectSection = () => {
   return (
@@ -10,7 +10,7 @@ const ProjectSection = () => {
       variants={navVariants}
       initial="hidden"
       whileInView="show"
-      className="py-40  mx-auto"
+      className="py-60  mx-auto"
     >
       <div className="flex items-center text-left justify-start mt-2 mb-10 text-lightOrange relative ">
         <div className="absolute left-[25%] bottom-0 flex">
