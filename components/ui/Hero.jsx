@@ -10,10 +10,13 @@ const Hero = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
-      className="flex flex-col rounded-2xl z-30  select-none "
+      className="flex flex-col rounded-2xl select-none "
     >
-      <motion.div className="z-30" variants={slideIn("down", "tween", 0.2, 1)}>
-        <h1 className="font-mono z-50 text-lightOrange text-base lg:text-lg 2xl:text-2xl 3xl:text-3xl mb-5">
+      <motion.div
+        className="z-30 w-fit "
+        variants={slideIn("down", "tween", 0.2, 1)}
+      >
+        <h1 className="font-mono z-0 text-lightOrange text-base lg:text-lg 2xl:text-2xl 3xl:text-3xl mb-5">
           Hi, my name is
         </h1>
 
@@ -21,8 +24,11 @@ const Hero = () => {
           Matthew Wardlow.
         </h2>
       </motion.div>
-      <motion.div className="z-30" variants={slideIn("left", "tween", 0.2, 1)}>
-        <h3 className="text-slate  mt-[10px] text-2xl lg:text-5xl    3xl:text-6xl">
+      <motion.div
+        className="z-30 w-fit "
+        variants={slideIn("left", "tween", 0.2, 1)}
+      >
+        <h3 className="text-slate  mt-[10px] text-2xl lg:text-5xl   3xl:text-6xl">
           {`I'm thinking of the next solution`}
         </h3>
 

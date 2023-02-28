@@ -34,8 +34,8 @@ function Geometry() {
   const [count, setCount] = useState(0);
   const ref = useRef();
   useFrame((_, delta) => {
-    ref.current.rotation.x += delta;
-    ref.current.rotation.y += 0.2 * delta;
+    ref.current.rotation.x += 0.1 * delta;
+    ref.current.rotation.y += 0.1 * delta;
   });
 
   return (
