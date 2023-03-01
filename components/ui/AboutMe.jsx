@@ -46,8 +46,8 @@ const AboutMe = () => {
           <div className="absolute bg-lightOrange w-full h-full rounded-xl "></div>
           <Image
             src="/cover.jpg"
-            width={2000}
-            height={1000}
+            width={200}
+            height={100}
             alt="cover"
             className="w-full z-11 grayscale mix-blend-multiply rounded-xl  hover:grayscale-0 hover:mix-blend-normal transition ease-in duration-150"
           />
