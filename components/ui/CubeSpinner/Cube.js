@@ -1,112 +1,113 @@
 import { useGLTF, OrbitControls } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { useState, useRef } from "react";
+import { useRef } from "react";
 import * as THREE from "three";
+
 export function Cube() {
   return (
-    <Canvas dpr={[1, 2]} camera={{ position: [20, 0, 150], fov: 90 }}>
-      <Lights />
+    <Canvas dpr={[1, 2]} camera={{ position: [0, 0, 0.6], fov: 90 }}>
       <Geometry />
+
+      <ambientLight intensity={0.2} />
       <OrbitControls />
     </Canvas>
   );
 }
 
-function Lights() {
-  const lights = [[-0, 0, 10, 0.2]];
-  return (
-    <>
-      {lights.map(([x, y, z, intensity], i) => (
-        <pointLight
-          key={i}
-          intensity={intensity}
-          position={[x / 8, y / 8, z / 8]}
-          color="orange"
-        />
-      ))}
-      <ambientLight intensity={0.2} />
-    </>
-  );
-}
-
 function Geometry() {
   const { nodes, materials } = useGLTF("/cube.glb");
-  const [count, setCount] = useState(0);
   const ref = useRef();
   useFrame((_, delta) => {
     ref.current.rotation.x += 0.1 * delta;
     ref.current.rotation.y += 0.1 * delta;
   });
-
   return (
-    <>
-      <group
-        position={[30, -25, 1]}
-        ref={ref}
-        onPointerDown={() => {
-          setCount((count + 1) % 3);
-        }}
-        scale={156.6}
-      >
-        <mesh
-          geometry={nodes.Curve_1.geometry}
-          material={materials["SVGMat.007"]}
-        />
-        <mesh
-          geometry={nodes.Curve_2.geometry}
-          material={materials["SVGMat.005"]}
-        />
-        <mesh
-          geometry={nodes.Curve_3.geometry}
-          material={materials["SVGMat.031"]}
-        />
-        <mesh
-          geometry={nodes.Curve_4.geometry}
-          material={materials["SVGMat.019"]}
-        />
-        <mesh
-          geometry={nodes.Curve_5.geometry}
-          material={materials["SVGMat.026"]}
-        />
-        <mesh
-          geometry={nodes.Curve_6.geometry}
-          material={materials["SVGMat.030"]}
-        />
-        <mesh
-          geometry={nodes.Curve_7.geometry}
-          material={materials["SVGMat.020"]}
-        />
-        <mesh
-          geometry={nodes.Curve_8.geometry}
-          material={materials["SVGMat.009"]}
-        />
-        <mesh
-          geometry={nodes.Curve_9.geometry}
-          material={materials["SVGMat.042"]}
-        />
-        <mesh
-          geometry={nodes.Curve_10.geometry}
-          material={materials["SVGMat.043"]}
-        />
-        <mesh
-          geometry={nodes.Curve_11.geometry}
-          material={materials["SVGMat.044"]}
-        />
-        <mesh
-          geometry={nodes.Curve_12.geometry}
-          material={materials["SVGMat.046"]}
-        />
-        <mesh
-          geometry={nodes.Curve_13.geometry}
-          material={materials["SVGMat.027"]}
-        />
-        <mesh
-          geometry={nodes.Curve_14.geometry}
-          material={materials["base.003"]}
-        />
-        <mesh geometry={nodes.Curve_15.geometry} material={materials.edges} />
-        <mesh geometry={nodes.Curve_16.geometry} material={materials.corners} />
-      </group>
-    </>
+    <group ref={ref} scale={1.2}>
+      <mesh
+        geometry={nodes.Curve013.geometry}
+        material={materials["SVGMat.001"]}
+      />
+      <mesh
+        geometry={nodes.Curve013_1.geometry}
+        material={materials.Material}
+      />
+      <mesh
+        geometry={nodes.Curve013_2.geometry}
+        material={materials["Material.001"]}
+      />
+      <mesh geometry={nodes.Curve013_3.geometry} material={materials.SVGMat} />
+      <mesh
+        geometry={nodes.Curve013_4.geometry}
+        material={materials["SVGMat.011"]}
+      />
+      <mesh
+        geometry={nodes.Curve013_5.geometry}
+        material={materials["SVGMat.012"]}
+      />
+      <mesh
+        geometry={nodes.Curve013_6.geometry}
+        material={materials["SVGMat.013"]}
+      />
+      <mesh
+        geometry={nodes.Curve013_7.geometry}
+        material={materials["SVGMat.015"]}
+      />
+      <mesh
+        geometry={nodes.Curve013_8.geometry}
+        material={materials["SVGMat.014"]}
+      />
+      <mesh
+        geometry={nodes.Curve013_9.geometry}
+        material={materials["SVGMat.016"]}
+      />
+      <mesh
+        geometry={nodes.Curve013_10.geometry}
+        material={materials["SVGMat.017"]}
+      />
+      <mesh
+        geometry={nodes.Curve013_11.geometry}
+        material={materials["SVGMat.027"]}
+      />
+      <mesh
+        geometry={nodes.Curve013_12.geometry}
+        material={materials["SVGMat.032"]}
+      />
+      <mesh
+        geometry={nodes.Curve013_13.geometry}
+        material={materials["SVGMat.029"]}
+      />
+      <mesh
+        geometry={nodes.Curve013_14.geometry}
+        material={materials["SVGMat.030"]}
+      />
+      <mesh
+        geometry={nodes.Curve013_15.geometry}
+        material={materials["SVGMat.031"]}
+      />
+      <mesh
+        geometry={nodes.Curve013_16.geometry}
+        material={materials["SVGMat.028"]}
+      />
+      <mesh
+        geometry={nodes.Curve013_17.geometry}
+        material={materials["SVGMat.040"]}
+      />
+      <mesh
+        geometry={nodes.Curve013_18.geometry}
+        material={materials["SVGMat.039"]}
+      />
+      <mesh
+        geometry={nodes.Curve013_19.geometry}
+        material={materials["SVGMat.042"]}
+      />
+      <mesh
+        geometry={nodes.Curve013_20.geometry}
+        material={materials["SVGMat.041"]}
+      />
+      <mesh
+        geometry={nodes.Curve013_21.geometry}
+        material={materials["SVGMat.044"]}
+      />
+    </group>
   );
 }
