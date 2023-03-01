@@ -5,6 +5,43 @@ import { TbBrandGithub } from "react-icons/tb";
 import { VscLinkExternal } from "react-icons/vsc";
 const Projects3 = () => {
   const [data, setData] = useState();
+  const proj = [
+    {
+      github: "https://github.com/MaW000/next-clip",
+      id: "63f8751a639c6460dc1dc1df",
+      img: "/nextClip.png",
+      info: "Saves hundreds of thousands of comments to mongodb database, you can then type in keywords and number of occurrences to filter for specific moments. \nThis is a unique idea that will be useful to people that post clips from twitch streams onto tiktok or youtube. \nThey could save hours everyday by filtering the sometimes 20 hour videos into a organized handful of the most engaging clips. ",
+      live: "https://next-clip.herokuapp.com/",
+      tech: ["React", "Tailwind", "MongoDB", "Next.js"],
+      title: "Next-Clip",
+    },
+    {
+      id: "63f876d56ad2a22676be9f22",
+      title: "Apple top 100 dashboard",
+      info: "A design for a music app. Uses Apples API to fetch the top 100 albums. Uses these to create a design mockup. Highly responsive with  intuitive ux/ui choices. ",
+      tech: ["React", "Tailwind", "CSS"],
+      img: "/musicApp.png",
+      github: "https://github.com/MaW000/Music-App",
+      live: "https://music-app-maw000.vercel.app/",
+    },
+    {
+      id: "63f87b6b97148946141360dd",
+      title: "Next-Portfolio",
+      info: "All assets were custom made by me in either Figma (logo) or Blender (3D cube). I used Three.js to import the glb file into a canvas. This has given me inspiration as to how 3d assets and animations can bring a website to life. Since this is coded in Next.js I took advantage of the built in backend to add a dashboard allowing me to add projects through the ui using Prisma/MongoDB. The dashboard uses Next-Auth's useSession to authenticate the user has permission. ",
+      tech: [
+        "React",
+        "Next.js",
+        "Tailwind",
+        "Framer-motion",
+        "Next-Auth",
+        "Three.js",
+        "Prisma",
+      ],
+      img: "/nextPortfolio.png",
+      github: "https://github.com/MaW000/portfolio-next",
+      live: "",
+    },
+  ];
   useEffect(() => {
     fetch("/api/projects", {
       method: "get",
@@ -12,12 +49,11 @@ const Projects3 = () => {
       .then(async (res) => await res.json())
       .then((res) => setData(res));
   }, []);
-
   return (
     <>
       <div className="flex flex-col  gap-20 mt-10 lg:mx-10  3xl:mx-100 ">
-        {data &&
-          data.map((project) => {
+        {proj &&
+          proj.map((project) => {
             return (
               <div
                 key={project.title}
