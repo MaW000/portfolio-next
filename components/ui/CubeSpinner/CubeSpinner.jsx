@@ -13,7 +13,7 @@ const CubeSpinner = () => {
         variants={slideIn("right", "tween", 0.2, 1)}
         initial="hidden"
         whileInView="show"
-        className="absolute z-20 bottom-[30rem]   md:bottom-[20rem] md:-right-[45rem] w-[150%]  h-[844px] md:h-[1000px] lg:h-full 3xl:lg:-right-[30rem]   2xl:w-[125%]"
+        className="absolute z-20 bottom-[30rem]   md:bottom-[20rem] md:-right-[45rem] w-[150%]  h-[844px] md:h-[1000px] lg:h-full   2xl:w-[125%]"
       >
         <Suspense fallback={null}>
           <Cube />

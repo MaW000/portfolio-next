@@ -71,8 +71,8 @@ const Projects3 = () => {
                   >
                     <Image
                       className="grayscale group/img h-full w-full mix-blend-multiply peer  lg:hover:grayscale-0 lg:hover:mix-blend-normal  transition   "
-                      width={"2559"}
-                      height={"1306"}
+                      width={"460"}
+                      height={"230"}
                       src={project.img}
                       alt="app photo"
                     />

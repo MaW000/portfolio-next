@@ -48,8 +48,8 @@ const Header = () => {
           <Image
             src="/logo.png"
             className="rounded-md"
-            width={4453}
-            height={1209.64}
+            width={200}
+            height={100.64}
             alt="logo"
           />
         </div>
