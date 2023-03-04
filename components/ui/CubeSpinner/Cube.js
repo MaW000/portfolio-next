@@ -9,7 +9,7 @@ export function Cube() {
       <Geometry />
 
       <ambientLight intensity={0.2} />
-      <OrbitControls />
+      <OrbitControls  />
     </Canvas>
   );
 }

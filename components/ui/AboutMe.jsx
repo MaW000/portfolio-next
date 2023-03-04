@@ -8,7 +8,7 @@ const AboutMe = () => {
       initial={"hidden"}
       whileInView="show"
       variants={slideIn("right", "tween", 0.2, 1)}
-      className="relative  md:max-w-3xl 2xl:max-w-4xl mx-auto pt-2 z-30"
+      className="relative my-20  md:max-w-3xl 2xl:max-w-4xl mx-auto pt-2 z-30"
     >
       <div className="bg-[#301008] border-t-4 border-r-4 border-lightOrange absolute  inset-0 -z-10 w-[105%] rounded-2xl " />
       <div className="md:grid md:grid-cols-10 gap-12 ml-4 flex flex-col md:flex-row">
@@ -46,8 +46,8 @@ const AboutMe = () => {
           <div className="absolute bg-lightOrange w-full h-full rounded-xl "></div>
           <Image
             src="/cover.jpg"
-            width={200}
-            height={100}
+            width={1000}
+            height={1000}
             alt="cover"
             className="w-full z-11 grayscale mix-blend-multiply rounded-xl  hover:grayscale-0 hover:mix-blend-normal transition ease-in duration-150"
           />

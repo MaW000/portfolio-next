@@ -13,9 +13,9 @@ const ProjectSection = () => {
       className="py-60  mx-auto"
     >
       <div className="flex items-center text-left justify-start mt-2 mb-10 text-lightOrange relative ">
-        <div className="absolute left-[25%] bottom-0 flex">
+        <div className="absolute left-[3%] md:left-[25%] bottom-2 flex">
           <h1 className="mr-2.5 lg:text-lg 3xl:text-2xl">02.</h1>
-          <h1 className="text-lg lg:text-xl 2xl:text-2xl leading-5 text-darkOrange   ">
+          <h1 className="text-lg lg:text-2xl 2xl:text-3xl leading-5 text-darkOrange   ">
             Some Things I`ve Built
           </h1>
         </div>
